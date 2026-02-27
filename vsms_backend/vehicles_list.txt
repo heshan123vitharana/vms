@@ -1,0 +1,10 @@
+1 - Toyota Camry
+2 - Honda Civic
+3 - BMW 3 Series
+4 - Mercedes-Benz C-Class
+5 - Tesla Model 3
+6 - Ford F-150
+7 - Audi Q5
+8 - Hyundai Tucson
+9 - Mazda CX-5
+10 - Chevrolet Silverado
