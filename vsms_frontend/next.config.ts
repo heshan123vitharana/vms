@@ -32,6 +32,11 @@ const nextConfig = {
         hostname: '127.0.0.1',
         port: '8000',
         pathname: '/storage/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'vms-q6py.onrender.com',
+        pathname: '/storage/**'
       }
     ]
   },
