@@ -122,45 +122,17 @@ export default function FooterSection() {
                 borderColor: 'grey.700'
               }}
             >
-              {/* Map Placeholder */}
-              <Box
-                sx={{
-                  width: '100%',
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  p: 3
-                }}
-              >
-                <Location size={60} variant="Bulk" style={{ marginBottom: 16, opacity: 0.5 }} />
-                <Typography variant="h6" color="grey.400" sx={{ mb: 1 }}>
-                  Interactive Map
-                </Typography>
-                <Typography variant="body2" color="grey.500" textAlign="center">
-                  Map showing main branch and sub-branches locations<br />
-                  (Google Maps integration can be added here)
-                </Typography>
-                
-                {/* Sample branch markers */}
-                <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
-                  {branches.map((branch, index) => (
-                    <Box
-                      key={branch.id}
-                      sx={{
-                        px: 2,
-                        py: 1,
-                        bgcolor: index === 0 ? 'primary.main' : 'secondary.main',
-                        borderRadius: 1,
-                        fontSize: '0.75rem'
-                      }}
-                    >
-                      {branch.name}
-                    </Box>
-                  ))}
-                </Stack>
-              </Box>
+              {/* Google Maps Embed */}
+              <iframe
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                src="https://maps.google.com/maps?q=117/B,%20Colombo%20Road,%20Raththanapitiya,%20Boralesgamuwa,%20Sri%20Lanka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Nandana Enterprises Location"
+              />
             </Box>
           </Grid>
         </Grid>
