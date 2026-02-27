@@ -1,0 +1,15 @@
+.git
+node_modules
+vendor
+.env
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+tests
+phpunit.xml
+README.md
+*.md
+db_check.php
+vehicles_list.txt
+composer_error.log
