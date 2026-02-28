@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { getSession, signOut } from 'next-auth/react';
 
-const axiosServices = axios.create({ baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api' });
+const axiosServices = axios.create({ baseURL: process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_APP_API_URL || 'http://localhost:8000/api' });
 
 // ==============================|| AXIOS - FOR MOCK SERVICES ||============================== //
 
@@ -57,7 +57,7 @@ axiosServices.interceptors.response.use(
     // Log as string to ensure it shows up
     console.error('Axios interceptor error:', JSON.stringify(errorLog, null, 2));
     console.error('Raw error object:', error);
-    
+
     if (typeof window !== 'undefined' && error.response?.status === 401 && !window.location.href.includes('/login')) {
       await signOut();
       window.location.pathname = '/login';

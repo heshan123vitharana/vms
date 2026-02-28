@@ -23,7 +23,7 @@ declare module 'next-auth' {
 }
 
 export const authOptions: NextAuthOptions = {
-  secret: process.env.NEXTAUTH_SECRET_KEY,
+  secret: process.env.NEXTAUTH_SECRET || process.env.NEXTAUTH_SECRET_KEY,
   providers: [
     CredentialsProvider({
       id: 'login',
@@ -80,7 +80,7 @@ export const authOptions: NextAuthOptions = {
     maxAge: Number(process.env.NEXT_APP_JWT_TIMEOUT!) || 86400 // Default 24 hours
   },
   jwt: {
-    secret: process.env.NEXT_APP_JWT_SECRET
+    secret: process.env.NEXT_APP_JWT_SECRET || process.env.NEXTAUTH_SECRET || process.env.NEXTAUTH_SECRET_KEY
   },
   pages: {
     signIn: '/login'
